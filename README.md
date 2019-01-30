@@ -1,4 +1,4 @@
-# JUnit10
+# JUnit1.0
 
 JUnit: http://members.pingnet.ch/gamma/junit.htm
 
