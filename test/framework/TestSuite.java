@@ -15,7 +15,7 @@ import java.util.Enumeration;
  * </pre>
  * @see Test
  */
-public class TestSuite implements Test {
+public class TestSuite {
 
 	private Vector fTests= new Vector(10);
 
@@ -26,7 +26,7 @@ public class TestSuite implements Test {
 		for (Enumeration e= fTests.elements(); e.hasMoreElements(); ) {
       		if (result.shouldStop() )
       			break;
-			Test test= (Test)e.nextElement();
+			TestCase test= (TestCase) e.nextElement();
 			test.run(result);
 		}
 	}
@@ -34,7 +34,7 @@ public class TestSuite implements Test {
     /**
      * Adds a test to the suite.
      */
-	public void addTest(Test test) {
+	public void addTest(TestCase test) {
 		fTests.addElement(test);
 	}
 
@@ -44,7 +44,7 @@ public class TestSuite implements Test {
 	public int countTestCases() {
 		int count= 0;
 		for (Enumeration e= fTests.elements(); e.hasMoreElements(); ) {
-			Test test= (Test)e.nextElement();
+			TestCase test= (TestCase) e.nextElement();
 			count= count + test.countTestCases();
 		}
 		return count;

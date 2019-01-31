@@ -72,7 +72,7 @@ import java.lang.reflect.*;
  * @see TestSuite
  */
 
-public abstract class TestCase implements Test {
+public abstract class TestCase {
 	private final String fName;
 
     /**

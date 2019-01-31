@@ -3,22 +3,25 @@ package test.textui;
 import java.util.Vector;
 import java.util.Hashtable;
 import java.util.Enumeration;
-import test.framework.*;
+import test.framework.TestCase;
+import test.framework.TestResult;
+import test.framework.Test;
+import test.framework.TestFailure;
 
 class TextTestResult extends TestResult {
 
 	public synchronized void addError(Test test, Throwable t) {
-		super.addError(test, t);
+		super.addError((TestCase) test, t);
 		System.out.println("E");
 	}
 
 	public synchronized void addFailure(Test test, Throwable t) {
-		super.addFailure(test, t);
+		super.addFailure((TestCase)test, t);
 		System.out.print("F");
 	}
 
 	public synchronized void startTest(Test test) {
-		super.startTest(test);
+		super.startTest((TestCase)test);
 		System.out.print(".");
 	}
 

@@ -7,7 +7,10 @@ package test.ui;
  *
  */
 
-import test.framework.*;
+import test.framework.TestCase;
+import test.framework.Test;
+import test.framework.TestSuite;
+import test.framework.TestResult;
 import java.util.Vector;
 import java.lang.reflect.*;
 

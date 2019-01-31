@@ -2,7 +2,9 @@
 package test.textui;
 
 import java.lang.reflect.*;
-import test.framework.*;
+import test.framework.Test;
+import test.framework.TestCase;
+import test.framework.TestSuite;
 
 /**
  * A command line based tool to run tests.

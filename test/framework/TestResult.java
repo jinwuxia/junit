@@ -31,29 +31,29 @@ public class TestResult extends Object {
      * Adds an error to the list of errors. The passed in exception
      * caused the error.
      */
-	public synchronized void addError(Test test, Throwable t) {
-		fErrors.addElement(new TestFailure(test, t));
+	public synchronized void addError(TestCase test, Throwable t) {
+		fErrors.addElement(new TestFailure((Test)test, t));
 	}
 
     /**
      * Adds a failure to the list of failures. The passed in exception
      * caused the failure.
      */
-	public synchronized void addFailure(Test test, Throwable t) {
-		fFailures.addElement(new TestFailure(test, t));
+	public synchronized void addFailure(TestCase test, Throwable t) {
+		fFailures.addElement(new TestFailure((Test)test, t));
 	}
 
     /**
      * Informs the result that a test will be started.
      */
-	public synchronized void startTest(Test test) {
+	public synchronized void startTest(TestCase test) {
 		fRunTests++;
 	}
 
     /**
      * Informs the result that a test was completed.
      */
-	public synchronized void endTest(Test test) {
+	public synchronized void endTest(TestCase test) {
 	}
 
     /**
