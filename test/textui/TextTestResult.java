@@ -3,7 +3,9 @@ package test.textui;
 import java.util.Vector;
 import java.util.Hashtable;
 import java.util.Enumeration;
-import test.framework.*;
+import test.framework.Test;
+import test.framework.TestFailure;
+import test.framework.TestResult;
 
 class TextTestResult extends TestResult {
 
